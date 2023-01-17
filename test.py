@@ -29,23 +29,22 @@ def parser():
     inlezen = f.read()
 
     if inlezen != feed[0].title:
-
-        # datetime object containing current date and time
-        #now = datetime.now()
-        #print("now =", now)
         
-        # dd/mm/YY H:M:S
-        #dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-        #print("actual date and time =", dt_string)	
-        
-        #for entry in feed:
-        #    print(entry.published[0:25] + ' ' + entry.title)
-
-        #print(feed[0].published[0:25] + ' ' + feed[0].title)
-
         #print(feed[0])
+        my_datetime_str = feed[0].published
 
-        final_new = timestampStr + '\n' + feed[0].title
+        print (my_datetime_str)
+
+        my_datetime_object = datetime.strptime(my_datetime_str, "%a, %d %b %Y %H:%M:%S %z")
+
+        my_datetime_local = my_datetime_object.astimezone(pytz.timezone('Europe/Berlin')).strftime('%a, %d %b %Y %H:%M:%S %z')
+
+        print (my_datetime_local)
+
+
+
+
+        final_new = my_datetime_local [0:25] + '\n' + feed[0].title
 
         print(final_new)
 
