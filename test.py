@@ -12,10 +12,10 @@ def parser():
     timestampStr = dateTimeObj.strftime(fmt) 
     print('Current Timestamp : ', timestampStr)
 
-    consumer_key = "xZLVPRB4Is6mfjyKijKxg"
-    consumer_secret = "khMjfOvrjmDDcjZxNzGq9qTPlMQ0ERaIP5WhJJ9lo"
-    access_token = "1093072820-AJFCrrUNKUALq2wUMakAJ5E89rGqXA4OLSfxTVx"
-    access_token_secret = "0vuslRTeqh3buaQPylBia1JKH1qA3TksrEnPQEm9NeVHu"
+    consumer_key = "5CzqVkPrOeSRI0W4UmKTHhtfI"
+    consumer_secret = "XVBtZOBhrlLDnmToBjryUAHbOlswVeCcWmqqlVAQ7DjMESStHc"
+    access_token = "1093072820-ZwcD9nhgZXaCWDnn2MO4VDu6IryOkunJAcpefCs"
+    access_token_secret = "NwCMSXh5yCRqHOlax8VDV1UlSu5P2LWI0CQJQXFWZIgzR"
 
     
     
