@@ -12,10 +12,10 @@ def parser():
     timestampStr = dateTimeObj.strftime(fmt) 
     print('Current Timestamp : ', timestampStr)
 
-    consumer_key = "SvhVUXH5cc7yA7lNbHQRTj0IJ"
-    consumer_secret = "zap5PSIdtzZ6kj4BqpZEcBuz9FdDNwRp7inFuwTFZt3HhJtAHF"
-    access_token = "1093072820-KngKSFbfn82fhXtLwtQwDlCBBj6oyOIVvpj6QTk"
-    access_token_secret = "cJeN996nsaP6Rq2XvR0AOeUcQNvuZnimLmwi1EFF9qoez"
+    client = tweepy.Client(consumer_key="973MzJmk6AWYd30L62I7pd0x1",
+                    consumer_secret="V5gzRtGYwcXiKJpMKc9UHXIGFAjLV6SIRXIQ1W1ny6kO54u8fF",
+                    access_token="1093072820-GS3A5QIHfylFAVa1pbl66gwsHVk2Q8uskhiUGpa",
+                    access_token_secret="tab4kD9Sfp713jeEpjBzFe8waLrdXhzXcULAEw48xFgDq")
 
     
     
@@ -48,20 +48,7 @@ def parser():
 
         print(final_new)
 
-        def OAuth():
-                    try:
-                        auth = tweepy.OAuthHandler(consumer_key, consumer_secret) 
-                        auth.set_access_token(access_token, access_token_secret)
-                        return auth
-
-                    except Exception as e:
-                        return None 
-        
-        oauth = OAuth()
-        api = tweepy.API(oauth)
-        api.update_status(final_new)
-        print('A tweet is posted')
-
+        response = client.create_tweet(text=final_new)
 
     f = open('/app/last.txt', 'w')
     f.write(feed[0].title)
