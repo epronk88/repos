@@ -12,12 +12,12 @@ def parser():
     timestampStr = dateTimeObj.strftime(fmt) 
     print('Current Timestamp : ', timestampStr)
 
-    client = tweepy.Client(consumer_key="973MzJmk6AWYd30L62I7pd0x1",
-                    consumer_secret="V5gzRtGYwcXiKJpMKc9UHXIGFAjLV6SIRXIQ1W1ny6kO54u8fF",
-                    access_token="1093072820-GS3A5QIHfylFAVa1pbl66gwsHVk2Q8uskhiUGpa",
-                    access_token_secret="tab4kD9Sfp713jeEpjBzFe8waLrdXhzXcULAEw48xFgDq")
-
-    
+    key = "1RDuYkSifw5wA0BGivxWMuZv1"
+    keySecret = "lz3XKEoNoGCR9wNKDvAWDAGxI9E1cJ9zvYRGq0eNAKfvlyJ81Z"
+    accessToken = "1093072820-yqh9ZaSSv49AMsxf24SC1N8wOEjQVVKbPJclw0X"
+    accessTokenSecret = "1taOcANQ08iGeXf75ISaX7XSzG1omlzmO0T8nLBsjkHYN"
+    bearer_token=None
+    client = tweepy.Client(bearer_token,key,keySecret,accessToken,accessTokenSecret)
     
 
     
