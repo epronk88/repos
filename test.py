@@ -30,7 +30,7 @@ def parser():
 
     if inlezen != feed[0].title:
         
-        #print(feed[0])
+        print(feed[0])
         my_datetime_str = feed[0].published
 
         print (my_datetime_str)
