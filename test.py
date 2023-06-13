@@ -24,7 +24,7 @@ def parser():
     feed = feedparser.parse("https://alarmeringen.nl/feeds/region/rotterdam-rijnmond/politie.rss").entries
     
     
-    f = open("/app/last.txt", "r")
+    f = open("last.txt", "r")
     inlezen = f.read()
 
     if inlezen != feed[0].title:
@@ -49,7 +49,7 @@ def parser():
 
         response = client.create_tweet(text=final_new)
 
-    f = open('/app/last.txt', 'w')
+    f = open('last.txt', 'w')
     f.write(feed[0].title)
     f.close()
 
