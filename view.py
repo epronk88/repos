@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from flask import Flask, render_template
+from test import parser
 import os
 
 app = Flask(__name__)
@@ -9,6 +10,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST', 'GET'])
 def home():
+    parser()
     return render_template('index.html')
 
 
