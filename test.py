@@ -31,7 +31,7 @@ def parser():
     for x in range(5, 0, -1):
 
         if inlezen != feed[x].title and not any(word in feed[x].title for word in matches):
-            print(feed[x].title)
+            print(feed[x])
             my_datetime_str = feed[x].published
 
             print (my_datetime_str)
