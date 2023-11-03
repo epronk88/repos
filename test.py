@@ -28,7 +28,7 @@ def parser():
 
     matches = ["ambu", "U bent", "proefalarm", "posten", "b1", "b2"]
 
-    for x in range(5, 0, -1)
+    for x in range(5, 0, -1):
 
         if inlezen != feed[x].title and any(word in feed[x].title for word in matches):
             print(feed[x].title)
