@@ -24,7 +24,7 @@ def parser():
 
 
     for q in range(5, -1, -1):
-        print(feed[x].published + feed[0].title)
+        print(feed[q].published + feed[q].title)
 
 
 
