@@ -51,8 +51,8 @@ def parser():
 
             response = client.create_tweet(text=final_new)
 
-        f = open('last.txt', 'w')
-        f.write(feed[x].title)
-        f.close()
+            f = open('last.txt', 'w')
+            f.write(feed[x].title)
+            f.close()
 
 parser()
