@@ -46,11 +46,11 @@ def parser():
 
 
 
-        #final_new = my_datetime_local [0:25] + '\n' + feed[0].title + '\n' + '#p2000 #rijnmond'
+        final_new = my_datetime_local [0:25] + '\n' + feed[0].title + '\n' + '#p2000 #rijnmond'
 
         print(final_new)
 
-        response = client.create_tweet(text=final_new)
+        #response = client.create_tweet(text=final_new)
 
         f = open('last.txt', 'w')
         f.write(feed[0].title)
