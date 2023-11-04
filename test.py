@@ -28,7 +28,9 @@ def parser():
 
     matches = ["ambu", "U bent", "proefalarm", "posten", "b1", "b2"]
 
-    for q in range(1, -1, -1):
+    for q in range(0, -1, -1):
+
+        time.sleep(3)
 
         if inlezen != feed[q].title and not any(word in feed[q].title for word in matches):
             #print(feed[q])
