@@ -29,6 +29,7 @@ def parser():
 
 
 
+
     
     f = open("last.txt", "r")
     inlezen = f.read()
