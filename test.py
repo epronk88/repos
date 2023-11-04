@@ -20,7 +20,7 @@ def parser():
     client = tweepy.Client(bearer_token,key,keySecret,accessToken,accessTokenSecret)
     
 
-    feed = feedparser.parse("https://alarmeringen.nl/feeds/region/rotterdam-rijnmond/politie.rss").entries
+    feed = feedparser.parse("https://alarmeringen.nl/feeds/region/rotterdam-rijnmond.rss").entries
 
     
     f = open("last.txt", "r")
