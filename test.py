@@ -38,16 +38,16 @@ def parser():
     for x in range(0, -1, -1):
 
         if inlezen != feed[x].title and not any(word in feed[x].title for word in matches):
-            print(feed[x])
+            #print(feed[x])
             my_datetime_str = feed[x].published
 
-            print (my_datetime_str)
+            #print (my_datetime_str)
 
             my_datetime_object = datetime.strptime(my_datetime_str, "%a, %d %b %Y %H:%M:%S %z")
 
             my_datetime_local = my_datetime_object.astimezone(pytz.timezone('Europe/Berlin')).strftime('%a, %d %b %Y %H:%M:%S %z')
 
-            print (my_datetime_local)
+            #print (my_datetime_local)
 
 
 
