@@ -23,22 +23,14 @@ def parser():
     feed = feedparser.parse("https://alarmeringen.nl/feeds/region/rotterdam-rijnmond/politie.rss").entries
 
 
-    for q in range(5, -1, -1):
-        print(feed[q].published + feed[q].title)
-
-
-
-
-
     
     f = open("last.txt", "r")
     inlezen = f.read()
 
-    matches = ["ambu", "U bent", "proefalarm", "posten", "b1", "b2"]
 
-    # for x in range(0, -1, -1):
 
-    if inlezen != feed[0].title: #and not any(word in feed[0].title for word in matches):
+
+    if inlezen != feed[0].title:
         #print(feed[x])
         my_datetime_str = feed[0].published
 
