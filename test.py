@@ -50,7 +50,7 @@ def parser():
 
         print(final_new)
 
-        #response = client.create_tweet(text=final_new)
+        response = client.create_tweet(text=final_new)
 
         f = open('last.txt', 'w')
         f.write(feed[0].title)
