@@ -8,7 +8,7 @@ def parser():
 
     fmt = "%d-%b-%Y (%H:%M:%S)"
     
-    # Converting datetime object to string....
+    # Converting datetime object to string...
     dateTimeObj = datetime.now(pytz.timezone('Europe/Berlin'))
     timestampStr = dateTimeObj.strftime(fmt) 
     print('Current Timestamp : ', timestampStr)
@@ -46,7 +46,7 @@ def parser():
 
 
 
-        final_new = my_datetime_local [0:25] + '\n' + feed[0].title + '\n' + '#p2000 #rijnmond'
+        #final_new = my_datetime_local [0:25] + '\n' + feed[0].title + '\n' + '#p2000 #rijnmond'
 
         print(final_new)
 
