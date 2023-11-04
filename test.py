@@ -20,7 +20,7 @@ def parser():
     client = tweepy.Client(bearer_token,key,keySecret,accessToken,accessTokenSecret)
     
 
-    feed = feedparser.parse("https://alarmeringen.nl/feeds/region/rotterdam-rijnmond.rss").entries
+    feed = feedparser.parse("https://alarmeringen.nl/feeds/region/rotterdam-rijnmond/politie.rss").entries
 
 
     for q in range(5, -1, -1):
