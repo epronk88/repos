@@ -1,6 +1,7 @@
 def parser():
     import feedparser
     import tweepy
+    import time
     from datetime import datetime
     import pytz
 
