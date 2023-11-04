@@ -26,10 +26,10 @@ def parser():
     f = open("last.txt", "r")
     inlezen = f.read()
 
+    matches = ["ambu", "U bent", "proefalarm", "posten", "b1", "b2"]
 
 
-
-    if inlezen != feed[0].title:
+    if inlezen != feed[0].title and not any(word in feed[0].title for word in matches):
         #print(feed[x])
         my_datetime_str = feed[0].published
 
