@@ -37,9 +37,9 @@ def parser():
 
     for x in range(0, -1, -1):
 
-        if inlezen != feed[x].title and not any(word in feed[x].title for word in matches):
+        if inlezen != feed[0].title and not any(word in feed[0].title for word in matches):
             #print(feed[x])
-            my_datetime_str = feed[x].published
+            my_datetime_str = feed[0].published
 
             #print (my_datetime_str)
 
@@ -52,14 +52,14 @@ def parser():
 
 
 
-            final_new = my_datetime_local [0:25] + '\n' + feed[x].title + '\n' + '#p2000 #rijnmond'
+            final_new = my_datetime_local [0:25] + '\n' + feed[0].title + '\n' + '#p2000 #rijnmond'
 
             print(final_new)
 
             response = client.create_tweet(text=final_new)
 
             f = open('last.txt', 'w')
-            f.write(feed[x].title)
+            f.write(feed[0].title)
             f.close()
 
 parser()
