@@ -22,7 +22,6 @@ def parser():
 
     feed = feedparser.parse("https://alarmeringen.nl/feeds/region/rotterdam-rijnmond/politie.rss").entries
 
-
     
     f = open("last.txt", "r")
     inlezen = f.read()
