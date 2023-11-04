@@ -35,31 +35,31 @@ def parser():
 
     matches = ["ambu", "U bent", "proefalarm", "posten", "b1", "b2"]
 
-    for x in range(0, -1, -1):
+    # for x in range(0, -1, -1):
 
-        if inlezen != feed[0].title and not any(word in feed[0].title for word in matches):
-            #print(feed[x])
-            my_datetime_str = feed[0].published
+    if inlezen != feed[0].title and not any(word in feed[0].title for word in matches):
+        #print(feed[x])
+        my_datetime_str = feed[0].published
 
-            #print (my_datetime_str)
+        #print (my_datetime_str)
 
-            my_datetime_object = datetime.strptime(my_datetime_str, "%a, %d %b %Y %H:%M:%S %z")
+        my_datetime_object = datetime.strptime(my_datetime_str, "%a, %d %b %Y %H:%M:%S %z")
 
-            my_datetime_local = my_datetime_object.astimezone(pytz.timezone('Europe/Berlin')).strftime('%a, %d %b %Y %H:%M:%S %z')
+        my_datetime_local = my_datetime_object.astimezone(pytz.timezone('Europe/Berlin')).strftime('%a, %d %b %Y %H:%M:%S %z')
 
-            #print (my_datetime_local)
-
-
+        #print (my_datetime_local)
 
 
-            final_new = my_datetime_local [0:25] + '\n' + feed[0].title + '\n' + '#p2000 #rijnmond'
 
-            print(final_new)
 
-            response = client.create_tweet(text=final_new)
+        final_new = my_datetime_local [0:25] + '\n' + feed[0].title + '\n' + '#p2000 #rijnmond'
 
-            f = open('last.txt', 'w')
-            f.write(feed[0].title)
-            f.close()
+        print(final_new)
+
+        response = client.create_tweet(text=final_new)
+
+        f = open('last.txt', 'w')
+        f.write(feed[0].title)
+        f.close()
 
 parser()
